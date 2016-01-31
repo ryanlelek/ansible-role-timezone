@@ -1,31 +1,45 @@
 Timezone
 ========
 
-A brief description of the role goes here.
+Configures Timezone
+
+IMPORTANT!
+----------
+**Using ANY value besides the default (Etc/UTC) is NOT RECOMMENDED.**  
+Leave it as the default unless you have a specific reason to change it.  
+WHATEVER you do, at least **be consistent** with the timezone you choose (Etc/UTC HIGHLY recommended).  
+See [Setting the Timezone](http://www.ansibletutorials.com/setting-the-timezone/) for more information.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+**timezone_locale**: Etc/UTC
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+**Default, Recommended!**
 
-    - hosts: servers
+    - hosts: all
       roles:
-         - { role: username.rolename, x: 42 }
+         - ryanlelek.timezone
+
+Not recommended, but if you want to change locales:
+
+    - hosts: all
+      roles:
+         - role: ryanlelek.timezone
+           timezone_locale: America/Los_Angeles
 
 License
 -------
@@ -35,4 +49,5 @@ MIT
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Created by [Ryan Lelek](https://www.ryanlelek.com)  
+Part of [AnsibleTutorials.com](http://www.ansibletutorials.com)
