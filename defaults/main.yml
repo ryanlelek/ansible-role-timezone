@@ -1,1 +1,15 @@
 ---
+#
+# @@@@@ IMPORTANT @@@@@
+# ANYTHING OTHER THAN Etc/UTC
+# IS NOT RECOMMENDED AT ALL!!!
+# See Link: http://www.ansibletutorials.com/setting-the-timezone/
+#
+# Options:
+# - Etc/UTC
+# - America/New_York
+# - America/Los_Angeles
+# - etc.
+# Full List: https://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/timezone.html
+#
+timezone_locale: Etc/UTC
